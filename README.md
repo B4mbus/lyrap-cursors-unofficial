@@ -13,7 +13,4 @@ I use it for my [NixOS config](https://github.com/b4mbus/snowstorm).
 </div>
 
 Sources:
-[Original repo](https://github.com/yeyushengfan258/Lyra-Cursors)
-
-
-[Gnome-look](https://www.gnome-look.org/p/1510128/)
+[Original repo](https://github.com/yeyushengfan258/Lyra-Cursors), [Gnome-look](https://www.gnome-look.org/p/1510128/)

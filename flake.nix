@@ -1,8 +1,10 @@
 {
   description = "LyraP Cursors";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    flake-utils.url = "github:numtide/flake-utils/v1.0.0";
+  };
 
   outputs = {
     self,
@@ -11,12 +13,13 @@
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
-    in rec {
+      name = "lyrap-cursors";
+    in {
       formatter = pkgs.alejandra;
 
       packages.default = pkgs.stdenv.mkDerivation {
-        name = "lyrap-cursors";
-        pname = "lyrap-cursors";
+        inherit name;
+
         src = self;
 
         installPhase = let

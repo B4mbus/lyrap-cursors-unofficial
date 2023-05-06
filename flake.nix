@@ -2,10 +2,7 @@
   description = "LyraP Cursors";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  inputs.flake-utils = {
-    url = "github:numtide/flake-utils";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+  inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = {
     self,

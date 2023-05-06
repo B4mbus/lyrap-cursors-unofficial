@@ -23,7 +23,7 @@
           installPath = "$out/share/icons/LyraP-Cursors";
         in ''
           mkdir -p ${installPath}
-          cp -va index.theme cursors ${installPath}
+          cp -va index.theme cursors/ ${installPath}
         '';
       };
     });

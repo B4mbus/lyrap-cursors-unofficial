@@ -13,12 +13,12 @@
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
-      name = "lyrap-cursors";
     in {
       formatter = pkgs.alejandra;
 
       packages.default = pkgs.stdenv.mkDerivation {
-        inherit name;
+        pname = "lyrap-cursors";
+        version = "0.1.0";
 
         src = self;
 
